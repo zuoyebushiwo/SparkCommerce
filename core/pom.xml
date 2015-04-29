@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>spark</artifactId>
+        <groupId>org.sparkcommerce</groupId>
+        <version>1.0.0-GA</version>
+    </parent>
+    <artifactId>core</artifactId>
+    <packaging>pom</packaging>
+    <name>SparkCommerce Core</name>
+    <description>SparkCommerce Core Mid Level Project</description>
+    <url>http://www.sparkcommerce.org</url>
+    <properties>
+        <project.uri>${project.baseUri}/../</project.uri>
+    </properties>
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    
+    <modules>
+        <module>spark-profile</module>
+        <module>spark-profile-web</module>
+        <module>spark-framework</module>
+        <module>spark-framework-web</module>
+  </modules>
+</project>

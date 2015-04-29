@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  #%L
+  SparkCommerce Common Libraries
+  %%
+  Copyright (C) 2009 - 2013 Spark Commerce
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+    <bean id="org.sparkcommerce.common.email.domain.EmailTracking" class="org.sparkcommerce.common.email.domain.EmailTrackingImpl" scope="prototype"/>
+    <bean id="org.sparkcommerce.common.email.domain.EmailTrackingClicks" class="org.sparkcommerce.common.email.domain.EmailTrackingClicksImpl" scope="prototype"/>
+    <bean id="org.sparkcommerce.common.email.domain.EmailTrackingOpens" class="org.sparkcommerce.common.email.domain.EmailTrackingOpensImpl" scope="prototype"/>
+    <bean id="org.sparkcommerce.common.email.domain.EmailTarget" class="org.sparkcommerce.common.email.domain.EmailTargetImpl" scope="prototype"/>
+    <bean id="org.sparkcommerce.common.enumeration.domain.DataDrivenEnumeration" class="org.sparkcommerce.common.enumeration.domain.DataDrivenEnumerationImpl" scope="prototype"/>
+    <bean id="org.sparkcommerce.common.enumeration.domain.DataDrivenEnumerationValue" class="org.sparkcommerce.common.enumeration.domain.DataDrivenEnumerationValueImpl" scope="prototype"/>
+    <bean id="org.sparkcommerce.common.config.domain.SystemProperty" class="org.sparkcommerce.common.config.domain.SystemPropertyImpl" scope="prototype" />
+    <bean id="org.sparkcommerce.common.i18n.domain.Translation" class="org.sparkcommerce.common.i18n.domain.TranslationImpl" scope="prototype" />
+    <bean id="org.sparkcommerce.common.structure.dto.StructuredContentDTO" class="org.sparkcommerce.common.structure.dto.StructuredContentDTO" scope="prototype" />
+    <bean id="org.sparkcommerce.common.structure.dto.ItemCriteriaDTO" class="org.sparkcommerce.common.structure.dto.ItemCriteriaDTO" scope="prototype" />
+    <bean id="org.sparkcommerce.common.media.domain.MediaDto" class="org.sparkcommerce.common.media.domain.MediaDto" />
+    <bean id="org.sparkcommerce.common.sitemap.domain.SiteMapConfiguration" class="org.sparkcommerce.common.sitemap.domain.SiteMapConfigurationImpl" scope="prototype" />
+    <bean id="org.sparkcommerce.common.sitemap.domain.SiteMapGeneratorConfiguration" class="org.sparkcommerce.common.sitemap.domain.SiteMapGeneratorConfigurationImpl" scope="prototype" />
+    <bean id="org.sparkcommerce.common.sitemap.domain.SiteMapUrlEntry" class="org.sparkcommerce.common.sitemap.domain.SiteMapUrlEntryImpl" scope="prototype" />
+    <bean id="org.sparkcommerce.common.sitemap.domain.CustomUrlSiteMapGeneratorConfiguration" class="org.sparkcommerce.common.sitemap.domain.CustomUrlSiteMapGeneratorConfigurationImpl" scope="prototype" />
+    <bean id="org.sparkcommerce.common.sandbox.domain.SandBoxManagement" class="org.sparkcommerce.common.sandbox.domain.SandBoxManagementImpl" scope="prototype" />
+    <bean id="org.sparkcommerce.common.site.domain.Site" class="org.sparkcommerce.common.site.domain.SiteImpl" scope="prototype" />
+    <bean id="org.sparkcommerce.common.site.domain.Catalog" class="org.sparkcommerce.common.site.domain.CatalogImpl" scope="prototype" />
+
+</beans>

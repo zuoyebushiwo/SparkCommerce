@@ -1,0 +1,82 @@
+/*
+ * #%L
+ * SparkCommerce Framework Web
+ * %%
+ * Copyright (C) 2009 - 2013 Spark Commerce
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+package org.sparkcommerce.core.web.controller.account;
+
+import org.sparkcommerce.common.exception.ServiceException;
+import org.sparkcommerce.common.web.controller.SparkAbstractController;
+import org.sparkcommerce.core.web.controller.account.validator.UpdateAccountValidator;
+import org.sparkcommerce.profile.core.domain.Customer;
+import org.sparkcommerce.profile.core.service.CustomerService;
+import org.sparkcommerce.profile.web.core.CustomerState;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+public class SparkUpdateAccountController extends SparkAbstractController {
+
+    @Resource(name = "blCustomerService")
+    protected CustomerService customerService;
+    
+    @Resource(name = "blUpdateAccountValidator")
+    protected UpdateAccountValidator updateAccountValidator;
+
+    protected String accountUpdatedMessage = "Account successfully updated";
+    
+    protected static String updateAccountView = "account/updateAccount";
+    protected static String accountRedirectView = "redirect:/account";
+
+    public String viewUpdateAccount(HttpServletRequest request, Model model, UpdateAccountForm form) {
+        Customer customer = CustomerState.getCustomer();
+        form.setEmailAddress(customer.getEmailAddress());
+        form.setFirstName(customer.getFirstName());
+        form.setLastName(customer.getLastName());
+        return getUpdateAccountView();
+    }
+
+    public String processUpdateAccount(HttpServletRequest request, Model model, UpdateAccountForm form, BindingResult result, RedirectAttributes redirectAttributes) throws ServiceException {
+        updateAccountValidator.validate(form, result);
+        if (result.hasErrors()) {
+            return getUpdateAccountView();
+        }
+        Customer customer = CustomerState.getCustomer();
+        customer.setEmailAddress(form.getEmailAddress());
+        customer.setFirstName(form.getFirstName());
+        customer.setLastName(form.getLastName());
+        customerService.saveCustomer(customer);
+        redirectAttributes.addFlashAttribute("successMessage", getAccountUpdatedMessage());
+        return getAccountRedirectView();
+    }
+
+    public String getUpdateAccountView() {
+        return updateAccountView;
+    }
+    
+    public String getAccountRedirectView() {
+        return accountRedirectView;
+    }
+    
+    public String getAccountUpdatedMessage() {
+        return accountUpdatedMessage;
+    }
+
+}

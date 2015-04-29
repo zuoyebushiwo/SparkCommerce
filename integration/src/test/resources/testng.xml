@@ -1,0 +1,44 @@
+<!--
+  #%L
+  SparkCommerce Integration
+  %%
+  Copyright (C) 2009 - 2013 Spark Commerce
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SparkCommerce Test Suite" verbose="2" parallel="false">
+    <test name="commerce-integrationtest">
+        <packages>
+            <package name="org.sparkcommerce.core.catalog.dao"></package>
+            <package name="org.sparkcommerce.core.catalog.service"></package>
+            <package name="org.sparkcommerce.core.checkout.service"></package>
+            <package name="org.sparkcommerce.common.email.service"></package>
+            <package name="org.sparkcommerce.profile.extensibility"></package>
+            <package name="org.sparkcommerce.core.inventory.service"></package>
+            <package name="org.sparkcommerce.layout"></package>
+            <package name="org.sparkcommerce.core.offer.service"></package>
+            <package name="org.sparkcommerce.core.order.dao"></package>
+            <package name="org.sparkcommerce.core.order.service"></package>
+            <package name="org.sparkcommerce.core.payment.service"></package>
+            <package name="org.sparkcommerce.core.pricing.service"></package>
+            <package name="org.sparkcommerce.profile.web.core.service"></package>
+            <package name="org.sparkcommerce.profile.web.core.controller"></package>
+            <package name="org.sparkcommerce.security.service"></package>
+            <package name="org.sparkcommerce.taglib"></package>
+            <package name="org.sparkcommerce.test"></package>
+            <package name="org.sparkcommerce.common.time.time"></package>
+        </packages>
+    </test>
+</suite>

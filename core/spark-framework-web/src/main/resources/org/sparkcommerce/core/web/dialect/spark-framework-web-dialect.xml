@@ -1,0 +1,53 @@
+<!--
+  #%L
+  SparkCommerce Framework Web
+  %%
+  Copyright (C) 2009 - 2014 Spark Commerce
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+<dialect xmlns="http://www.thymeleaf.org/extras/dialect"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.thymeleaf.org/extras/dialect
+                             http://www.thymeleaf.org/xsd/thymeleaf-extras-dialect-2.1.xsd"
+         prefix="blc"
+         namespace-uri="http://www.sparkcommerce.com/"
+         class="org.sparkcommerce.common.web.dialect.SCDialect">
+    
+    <!-- Element processors -->
+    <element-processor name="categories" class="org.sparkcommerce.core.web.processor.CategoriesProcessor" />
+    <element-processor name="form" class="org.sparkcommerce.core.web.processor.FormProcessor" />
+    <element-processor name="googleanalytics" class="org.sparkcommerce.core.web.processor.GoogleAnalyticsProcessor" />
+    <element-processor name="google_universal_analytics" class="org.sparkcommerce.core.web.processor.GoogleUniversalAnalyticsProcessor" />
+    <element-processor name="head" class="org.sparkcommerce.core.web.processor.HeadProcessor" />
+    <element-processor name="named_order" class="org.sparkcommerce.core.web.processor.NamedOrderProcessor" />
+    <element-processor name="one_page_checkout" class="org.sparkcommerce.core.web.processor.OnePageCheckoutProcessor" />
+    <element-processor name="product_option_display" class="org.sparkcommerce.core.web.processor.ProductOptionDisplayProcessor" />
+    <element-processor name="product_options" class="org.sparkcommerce.core.web.processor.ProductOptionsProcessor" />
+    <element-processor name="ratings" class="org.sparkcommerce.core.web.processor.RatingsProcessor" />
+    <element-processor name="related_products" class="org.sparkcommerce.core.web.processor.RelatedProductProcessor" />
+    <element-processor name="uncacheabledata" class="org.sparkcommerce.core.web.processor.UncacheableDataProcessor" />
+    
+    <!-- Attribute processors -->
+    <attribute-processor name="addsortlink" class="org.sparkcommerce.core.web.processor.AddSortLinkProcessor" />
+    <attribute-processor name="cache" class="org.sparkcommerce.core.web.processor.SparkCacheProcessor" />
+    <attribute-processor name="addsortlink" class="org.sparkcommerce.core.web.processor.AddSortLinkProcessor" />
+    <attribute-processor name="paginationpagelink" class="org.sparkcommerce.core.web.processor.PaginationPageLinkProcessor" />
+    <attribute-processor name="pagination-size-link" class="org.sparkcommerce.core.web.processor.PaginationSizeLinkProcessor" />
+    <attribute-processor name="pagination-sort-link" class="org.sparkcommerce.core.web.processor.PaginationSortLinkProcessor" />
+    <attribute-processor name="price" class="org.sparkcommerce.core.web.processor.PriceTextDisplayProcessor" />
+    <attribute-processor name="togglefacetlink" class="org.sparkcommerce.core.web.processor.ToggleFacetLinkProcessor" />
+    <attribute-processor name="removefacetvalueslink" class="org.sparkcommerce.core.web.processor.RemoveFacetValuesLinkProcessor" />
+    
+</dialect>

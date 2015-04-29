@@ -1,0 +1,37 @@
+########
+#The following file is used to define runtime properties that will read by ant tasks. 
+#if you need to override any of them,
+#then create a file in your home directory called .build.properties that contains only the override properties.
+#########
+
+#required
+maven.home=C:\\apache-maven-3.3.1
+
+#optional
+jrebel.path=/usr/lib/jrebel/jrebel.jar
+
+#optional for build-create-sql and build-update-sql ant tasks
+ant.hibernate.sql.ddl.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+
+#The following allow the build-update-sql ant task to connect to a database and generate DDL to 
+#update the schema
+ant.blPU.url=jdbc:mysql://localhost:3306/aslcommerce
+ant.blPU.userName=anand
+ant.blPU.password=anand
+ant.blPU.driverClassName=com.mysql.jdbc.Driver
+
+ant.blSecurePU.url=jdbc:mysql://localhost:3306/aslcommerce
+ant.blSecurePU.userName=anand
+ant.blSecurePU.password=anand
+ant.blSecurePU.driverClassName=com.mysql.jdbc.Driver
+
+ant.blCMSStorage.url=jdbc:mysql://localhost:3306/aslcommerce
+ant.blCMSStorage.userName=anand
+ant.blCMSStorage.password=anand
+ant.blCMSStorage.driverClassName=com.mysql.jdbc.Driver
+
+#Required for correct operation of some 3rd party modules
+#Relative paths are from the ant build.xml files, so site/build.xml and admin/build.xml.
+spring.instrument.path=../lib/spring-instrument-3.2.12.RELEASE.jar
+
+#End build-*-sql Ant Task Properties
