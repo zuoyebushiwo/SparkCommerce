@@ -23,11 +23,11 @@
     </licenses>
     <developers>
         <developer>
-            <id>jeff</id>
-            <name>Jeff Fischer</name>
-            <email>jfischer@sparkcommerce.org</email>
+            <id>Anand</id>
+            <name>Anand Dasari</name>
+            <email>gkdasari@gmail.com</email>
             <organization>spark Commerce</organization>
-            <organizationUrl>http://www.sparkcommerce.org</organizationUrl>
+            <organizationUrl>http://www.sparkcommerce.com</organizationUrl>
             <roles>
                 <role>cto</role>
                 <role>architect</role>
@@ -235,10 +235,10 @@
         </plugins>
     </build>
     <modules>
-        <module>common</module>
-        <module>core</module>
-        <module>integration</module>
-        <module>admin</module>
+        <module>SparkCommon</module>
+        <module>SparkCore</module>
+        <module>SparkIntegration</module>
+        <module>SparkAdmin</module>
     </modules>
     <dependencies>
     </dependencies>
